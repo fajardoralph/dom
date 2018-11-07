@@ -1,0 +1,379 @@
+<!doctype xhtml>
+<html lang="en">
+<head>
+	<!-- meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
+
+	<!-- bootstrap css -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!-- external css -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- google-fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+	<!-- font-awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<title>DOM</title>
+
+</head>
+	
+<body>
+	<div id="#myAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+	  <h4 class="d-inline"><strong>B12DC</strong></h4> <h4 class="d-inline"> - POWERED <em>DOWNY PASSION</em> and <em>KOPIKO BLACK</em></h3>
+	  <p text-center><h4><i class="fas fa-play"></i> <i class="fas fa-code"></i> &nbsp; <i class="fas fa-exclamation"></i> <i class="fas fa-heart"></i></h4></p>
+	  <!-- button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button> -->
+	</div>
+	
+	
+	<div class="container">
+		
+	<!-- EXERCISE #1 -->
+		<div class="alert alert-primary">
+			<h1 class="header-alert">
+				Document Object Model
+			</h1>
+			<h3 class="header-alert">
+				Exercise #1 - Change Variable Value
+			</h3>
+			<p> Declares variable <em> message </em> and change its display value.</p>
+			<blockquote>
+				Syntax	
+				<pre>
+			let message = "Hello Javascript"; 
+			message = "I will strive harder to learn Javascript" 
+			alert(message)
+				</pre>
+			</blockquote>
+		</div>
+
+	<!-- EXPERIMENT #1 -->
+		<div class="alert alert-danger">
+			<h3 class="header-alert">
+				Exercise # 1 - Experiment
+			</h3>
+			<p>Use button to show alert message.</p>
+			
+			<button id="messageBtn" class="btn btn-primary">Message</button>
+
+			<blockquote>
+				Syntax
+				<pre>
+			let messageBtn = document.querySelector('#messageBtn');
+			messageBtn.addEventListener('click',function(){
+				alert("I will strive harder to learn Javascript");
+			});
+				</pre>
+			</blockquote>
+		</div>
+
+	
+	
+	<!-- EXERCISE #2 -->
+
+	<div class="alert alert-primary">
+		<h3 class="header-alert">
+			Exercise #2 - Name Display
+		</h3>
+		<p> Declares variable <em> myName </em> and display it to console.</p>
+		<blockquote>
+		Syntax	
+			<pre>
+			let myName = "Happy Tummy";
+			console.log(myName);
+			</pre>
+		</blockquote>
+	</div>
+	<!-- EXPERIMENT #2 -->
+	<div class="alert alert-danger">
+		<h3 class="header-alert">
+			Experiment #2
+		</h3>
+		<p>Use button to display variable <em> myName </em> via Alert.</p>
+		<button id="myNameBtn" class="btn btn-primary">My Name</button>
+		<blockquote>
+			Syntax
+			<pre>
+			let myName = "Happy Tummy";
+			let myNameBtn = document.querySelector('#myNameBtn');
+			myNameBtn.addEventListener('click',function(){
+				alert(myName);
+			});
+			</pre>
+		</blockquote>
+	</div>
+
+	<!-- EXERCISE #3 -->
+
+	<div class="alert alert-primary">
+		<h3 class="header-alert">
+			Exercise #3 - Concatenation
+		</h3>
+		<p> Declares variable <em> Country </em> and <em> City </em> and display it to console.</p>
+		<blockquote>
+		Syntax	
+			<pre>
+			let Country = "Philippines";
+			let City = "Quezon City";
+			console.log("User Location: "+ City +", "+ Country);
+			</pre>
+		</blockquote>
+	</div>
+
+	<!-- EXPERIMENT #3 -->
+	<div class="alert alert-danger">
+		<h3 class="header-alert">
+			Exercise #3 - Experiment
+		</h3>
+		<p>Use button to display user location via Alert.</p>
+		<button id="userLocationBtn" class="btn btn-primary">User Location</button>
+		<blockquote>
+			Syntax
+			<pre>
+			let Country = "Philippines";
+			let City = "Quezon City";
+			let userLocationBtn = document.querySelector('#userLocationBtn');
+				userLocationBtn.addEventListener('click',function(){
+				alert("User Location: "+ City +", "+ Country);
+			});
+			</pre>
+		</blockquote>
+	</div>
+
+	<!-- EXERCISE #4 -->
+
+	<div class="alert alert-primary">
+		<h3 class="header-alert">
+			Exercise #4 - Fahrenheit to Celcius
+		</h3>
+		<p> Declares variable <em> fahrenheit </em> and converts it to <em>celcius</em>. Displays converted value in console.</p>
+		<blockquote>
+		Syntax	
+			<pre>
+			let fahrenheit = 50;
+			let celcius = (fahrenheit-32) * (5/9);
+			console.log("F to C: "+ celcius);
+			</pre>
+		</blockquote>
+	</div>
+
+	<!-- EXPERIMENT #4 -->
+	<div class="alert alert-danger">
+		<h3 class="header-alert">
+			Exercise #4 - Experiment
+		</h3>
+		<p>Use button to display prompt for fahrenheit temp and display converted value via alert.</p>
+		<button id="fahrenheitBtn" class="btn btn-primary">Convert Fahrenheit to Celcius</button>
+		<blockquote>
+			Syntax
+			<pre>
+			let fahrenheitBtn = document.querySelector('#fahrenheitBtn');
+			fahrenheitBtn.addEventListener('click',function(){
+				let fahrenheit = prompt("Enter fahrenheit temperature.");
+				let celcius = (fahrenheit-32)*(5/9);
+				alert(celcius);
+			});
+			</pre>
+		</blockquote>
+	</div>
+
+	<!-- EXERCISE #5 -->
+
+	<div class="alert alert-primary">
+		<h3 class="header-alert">
+			Exercise #5 - Student Score
+		</h3>
+		<p> Declares variable <em> examScore maxScore studentScore</em>. Displays percentage value in console.</p>
+		<blockquote>
+		Syntax	
+			<pre>
+			let examScore = prompt("what's your score?");
+			let maxScore = 48;
+			let studentScore = ((ExamScore/maxScore)*100).toFixed(2);
+			console.log(studentScore);
+			</pre>
+		</blockquote>
+	</div>
+
+	<!-- EXPERIMENT #5 -->
+	<div class="alert alert-danger">
+		<h3 class="header-alert">
+			Exercise # 5 - Experiment
+		</h3>
+		<p>.</p>
+		<div class="row">
+			<div class="col">
+				<label for="examScoreTxt">Exam Score</label>
+				<input id="examScoreTxt" type="text" class="form-control">
+			</div>
+			<div class="col">
+				<label for="maxScoreTxt">Max Score</label>
+				<input id="maxScoreTxt" type="text" class="form-control">
+			</div>
+		</div>
+		<button id="studentScoreBtn" class="btn btn-primary mt-2">Student Score</button>
+
+		<blockquote>
+			Syntax
+			<pre>
+			let studentScoreBtn = document.querySelector('#studentScoreBtn');
+				studentScoreBtn.addEventListener('click',function(){
+					let    examScore = document.querySelector('#examScoreTxt').value;
+					let     maxScore = document.querySelector('#maxScoreTxt').value;
+					let studentScore = ((examScore/maxScore)*100).toFixed(2);
+					alert("Student Score: "+studentScore +" %");
+				});
+			</pre>
+		</blockquote>
+	</div>
+
+	<!-- EXERCISE #6 -->
+
+	<div class="alert alert-primary">
+		<h3 class="header-alert">
+			Exercise #6 - Addition
+		</h3>
+		<p> Declares variable <em> firstNumber secondNumber sum</em>. Prompt Inputs and displays sum values via alert.</p>
+		<blockquote>
+		Syntax	
+			<pre>
+			let firstNumber = parseFloat(prompt("Enter First Number"));
+			let secondNumber = parseFloat(prompt("Enter Second Number"));
+			let sum = (firstNumber+secondNumber);
+			alert(sum);
+			</pre>
+		</blockquote>
+	</div>
+
+	<!-- EXPERIMENT #6 -->
+	<div class="alert alert-danger">
+		<h3 class="header-alert">
+			Exercise #6 - Experiment
+		</h3>
+		<p> Used two text inputs and button to display sum.</p>
+		<div class="row">
+			<div class="col">
+				<label for="firstNumber">First Number</label>
+				<input id="firstNumber" type="number" class="form-control">
+			</div>
+			<div class="col">
+				<label for="secondNumber">Second Number</label>
+				<input id="secondNumber" type="number" class="form-control">
+			</div>
+			<div class="col">
+				<label for="totalNumber">Total</label>
+				<h3 id="totalNumber" class="b-1-2">0</h3>
+			</div>
+		</div>
+		<button id="computeBtn" class="btn btn-primary mt-2">Compute</button>
+
+		<blockquote>
+			Syntax Approach 1
+
+			<pre>
+			let computeBtn = document.querySelector('#computeBtn');
+				computeBtn.addEventListener('click',function(){
+					let firstNumber = parseFloat(document.querySelector('#firstNumber').value);
+					let secondNumber = parseFloat(document.querySelector('#secondNumber').value);
+				    let sum = (firstNumber+secondNumber);
+				    let totalNumber = document.querySelector('#totalNumber');
+				    totalNumber.innerHTML = sum;
+				});
+			</pre>
+
+			Syntax Approach 2 - Using Functions
+			<pre>
+			function sum() {
+				let firstNumber = parseFloat(document.querySelector('#firstNumber').value);
+				let secondNumber = parseFloat(document.querySelector('#secondNumber').value);
+				let sum = (firstNumber+secondNumber);
+				let totalNumber = document.querySelector('#totalNumber');
+				totalNumber.innerHTML = sum;
+			}
+
+			let computeBtn = document.querySelector('#computeBtn');
+				computeBtn.addEventListener('click',sum);
+			</pre>
+		</blockquote>
+	</div>
+
+	<!-- EXERCISE #7 -->
+
+	<div class="alert alert-primary">
+		<h3 class="header-alert">
+			Exercise #6 - LOGIN
+		</h3>
+		<p> Uses If condition statements to verify login credentials.</p>
+		<blockquote>
+		Syntax	
+			<pre>
+			let name;
+			let isLoggedIn = true;
+			let isAdmin = true;
+
+			name = prompt("Enter Username");
+			if(isLoggedIn && isAdmin) {
+				alert("Welcome, Admin "+ name );
+			} 
+			else if(isLoggedIn) {
+				alert("Welcome, "+ name );
+			}
+			else {
+				alert("Welcome Guest")
+			}
+			</pre>
+		</blockquote>
+	</div>
+
+<!-- 	<div class="alert alert-danger">
+		<h3 class="header-alert">
+			Exercise #7 - Experiment
+		</h3>
+		<p> Used two text inputs and button to display sum.</p>
+		<div class="row">
+			<div class="col">
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<div class="input-group-text">
+							<input id="loggedinChk" type="checkbox" aria-label=""/>
+						</div>
+					</div>
+					<input id="isLoggedinTxt" type="text" class="form-control" disabled placeholder="isLoggedIn?" />
+				</div>	
+			</div>
+			<div class="col">
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<div class="input-group-text">
+							<input id="adminChk" type="checkbox" aria-label=""/>
+						</div>
+					</div>
+					<input type="text" class="form-control" disabled placeholder="isAdmin?" />
+				</div>	
+			</div>
+
+			<div class="col">
+				<input id="userName" type="text" class="form-control" />
+				<label for="userName">Username</label>
+			</div>
+		</div>
+
+		<button id="loginBtn" class="btn btn-primary mt-2">Login</button>
+	</div> -->
+
+
+	</div> <!-- end of container -->
+
+	<!-- jquery first then popper then bootstrap js -->
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+	<!-- external bootstrap js -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
